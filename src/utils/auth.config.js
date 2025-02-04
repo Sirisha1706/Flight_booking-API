@@ -10,8 +10,8 @@ export const amadeusAuth = async() =>{
             body: 
             new URLSearchParams({
                 grant_type: 'client_credentials',
-                client_id: 'uE1OqKGyJeIsGx8QNaJE818ENohd83zd',
-                client_secret : 'h5TCRF4v04pqZAnH'
+                client_id: process.env.AUTH_KEY,
+                client_secret : process.env.AUTH_SECRET
             }), 
         });
         const data = await resp.json();
